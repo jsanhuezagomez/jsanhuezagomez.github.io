@@ -7,40 +7,40 @@ tags: ["afp", "comisiones", "finanzas"]
 draft: false
 ---
 
-Últimamente me han llamado para ofrecerme un cambio de AFP para volver a mi AFP antigua. Esto es un cambio deliberado que hice después de darle quizás más tiempo y energía del que debería a esa decisión. Por lo tanto permíteme ahorrarte las próximas 30 calorías y decirte porqué deberías o no cambiarte de AFP.
+Últimamente me han llamado para ofrecerme un cambio de AFP para volver a mi AFP antigua. Esto es un cambio deliberado que hice después de darle varias vueltas a la desición (quizás más tiempo y energía del que debería). Por lo tanto permíteme ahorrarte las próximas 30 calorías y decirte porqué deberías o no cambiarte de AFP.
 
-Primero veamos si vale la pena poner plata en las AFPs:
+Aunque antes que nada veamos si vale la pena poner plata en las AFPs en primer lugar:
 
 ## Rentabilidad base de las AFP
 
-Si bien las AFPs como ahorro obligatorio permiten tener ahorros garantizados al momento de jubilarse y la rentabilidad es buena comparado con algunas de las herramientas financieras disponibles en el mercado chileno, la verdad, es que si lo comparamos con el S&P500, la rentabilidad es, honestamente, mediocre.
+Si bien las AFPs como ahorro obligatorio permiten tener ahorros garantizados al momento de jubilarse y la rentabilidad es buena comparada con algunas de las herramientas financieras disponibles en el mercado chileno, la verdad, es que si lo comparamos con el S&P500, la rentabilidad es, honestamente, mediocre.
 
 Como comparación este es el Fondo A (el más riesgoso y el que más paga) con un promedio anual de rentabilidad entre el 2002 y el 2026 del 5.83% en el mejor de los casos ([link](https://www.spensiones.cl/portal/institucional/597/w3-article-15807.html))
-![Rentabilidad de AFPs 2002-2026](/images/rentabilidad_fondo_a.png)
+![Rentabilidad de AFPs 2002-2026](/images/rentabilidad_fondo_a.png).
 
 Al momento de escribir este artículo, PlanVital era la AFP con mayor rentabilidad real en los últimos 5 años, con una rentabilidad promedio anual de 3.03%
 ![Rentabilidad de AFPs últimos 5 años](/images/rentabilidad_fondo_a_planvital.png)
 
-Los últimos 5 años se pueden ver en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec)
+Los últimos 5 años se pueden ver en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec).
 
 ![Rentabilidad de todos los fondos A últimos 5 años](/images/rentabilidad_fondo_a_todos_5.png)
 
-En comparación, el ETF IVV que replica el S&P500 rentó un promedio anual real de 8.84% en el periodo 2002-2026, mientras que en los últimos 5 años rindió un promedio de 10.06% real ([link](totalrealreturns.com/s/IVV?start=2021-01-31&end=2026-01-31))
+En comparación, el ETF IVV que replica el S&P500 rentó un promedio anual real de 8.84% en el periodo 2002-2026, mientras que en los últimos 5 años rindió un promedio de 10.06% real ([link](totalrealreturns.com/s/IVV?start=2021-01-31&end=2026-01-31)).
 
 ![Rentabilidad de IVV 2002-2026](/images/rentabilidad_ivv_periodoafp.png)
 ![Rentabilidad de IVV últimos 5 años](/images/rentabilidad_ivv_5.png)
 
-Visto de esta forma, en términos de hacer crecer el patrimonio, la opción dominante siempre debería ser evitar la AFP y colocar los ahorros en inversiones más valiosas
+Visto de esta forma, en términos de hacer crecer el patrimonio, la opción dominante siempre debería ser evitar la AFP y colocar los ahorros en inversiones más valiosas.
 
 ## Cotización obligatoria y comisiones
 
-El dinero que va a las AFPs viene de tu sueldo bruto, del cual se descuenta un 10%. Si tu sueldo es mayor al máximo imponible de 90 UFs (más de 3.5 millones), entonces, será el 10% de esas 90 UFs. Además, de tu sueldo bruto se paga una comisión que es variable y depende de la AFP que elijas, que va desde el 0.46% a 1.45% de tu sueldo bruto **total**.
+El dinero que va a las AFPs viene de tu sueldo bruto, del cual se descuenta un 10%. Si tu sueldo es mayor al máximo imponible de 90 UFs (más de ~3.5 millones de pesos), entonces, será el 10% de esas 90 UFs. Además, de tu sueldo bruto se paga una comisión que es variable y depende de la AFP que elijas, que va desde el 0.46% a 1.45% de tu sueldo bruto **total**.
 
-Por ejemplo si tu sueldo es de 1.000.000, ahorrarías 100.000 pesos al mes en la AFP y, además, estarás pagando 4.600 de comisión mensual si estuvieras en AFP UNO (la AFP con la comisión más barata a la fecha) y 14.500 si estuvieras en Provida (la AFP con comisión más cara). Si lo miras de forma anual, la diferencia entre AFP UNO y Provida es de 118.800 CLP extra que estás pagando.
+Por ejemplo si tu sueldo es de 1.000.000, ahorrarías 100.000 pesos al mes en la AFP y, además, estarás pagando 4.600 de comisión mensual si estuvieras en AFP UNO (la AFP con la comisión más barata a la fecha) y 14.500 si estuvieras en Provida (la AFP con comisión más cara). Si lo miras de forma anual, la diferencia entre AFP UNO y Provida es de 118.800 CLP adicionales que estarías pagando.
 
-## Rentabilidades y rentabilidades
+## Rentabilidad y más rentabilidad
 
-Como se puede ver en la primera imagen del artículo, la rentabilidad depende de la AFP en cuestión, pero que en el periodo 2002-2026 son de menos de 0.35% entre la AFP más rentable y la menos. Si lo vemos en los últimos 5 años en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec), vemos que la diferencia es de 0.56%. 
+Como se puede ver en la primera imagen del artículo, la rentabilidad depende de la AFP en cuestión, pero, en el periodo 2002-2026, la diferencia entre la AFP más rentable y la menos rentable, es de menos de 0.35%. Si vemos en los últimos 5 años en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec), vemos que la diferencia es de 0.56%. 
 
 La pregunta entonces que cabe hacerse es, ¿Vale la pena cambiarse de AFP cuando mi rentabilidad y mis comisiones cambian? Hagamos el ejercicio a 5 años, y veamos si el patrimonio acumulado gracias al cambio en rentabilidad vale el cambio en comisiones.
 
@@ -48,17 +48,17 @@ La pregunta entonces que cabe hacerse es, ¿Vale la pena cambiarse de AFP cuando
 
 Con esto en mente se construyó una calculadora para ver si vale la pena el cambio. Los supuestos son los siguientes:
 - Horizonte de 5 años
-- El sueldo de la persona se mantiene estable, en un monto real, durante esos 5 años
-- La diferencia entre la comisión más cara y la más barata se ahorra en un fondo alternativo con una rentabilidad diferente a la de las AFP (porque estamos claros en que ahorrar mal es mejor que no ahorrar)
+- El sueldo de la persona se mantiene estable y constante, en un monto real (es decir, ajustado a la inflación), durante esos 5 años
+- La diferencia entre la comisión más cara y la más barata se ahorra en un fondo alternativo con una rentabilidad diferente a la de las AFP
 
-Luego de 5 años se compara cual de las dos tiene mayor patrimonio acumulado. Se suma los depositos de sueldo, más la rentabilidad de la AFP, menos las comisiones y más la diferencia de comisión que se va a un fondo alternativo.
+Luego de 5 años se compara cual de las dos tiene mayor patrimonio acumulado. Se suma los depositos de sueldo, más la rentabilidad de la AFP, menos las comisiones y más la diferencia de comisión que se va a invertir un fondo alternativo.
 
 ## Ejemplo
 
 Usando los datos de 2002-2026, una persona mayor con:
 - Un sueldo bruto de 1.200.000.
 - 80.000.000 pesos ahorrados en la AFP.
-- Se quiere cambiar de Fondo A:
+- Se quiere cambiar del Fondo A:
     - En Habitat (comisión de 1.27% y rentabilidad de 5.83%).
     - A Planvital (comisión de 1.16% y rentabilidad de 5.48%).
 - Invierte la diferencia afuera al 5%.
@@ -67,13 +67,13 @@ Usando los datos de 2002-2026, una persona mayor con:
 
 Le sale más a cuenta quedarse en la AFP actual.
 
-Usando los datos de los últimos 5 años, un adulto joven, senior en IT con un muy buen sueldo piensa en cambiarse:
-- Sueldo bruto igual al maximo imponible de 3.577.178
-- 15.000.000 de pesos ahorrados en la AFP
-- Se quiere cambiar de Fondo A:
-    - En Planvital (comisión del 1.16%, rentabilidad del 3.04%)
-    - A UNO (comisión del 0.46%, rentabilidad del 2.48%)
-- Invierte la diferencia en IVV al 10%
+Otro ejemplo, usando los datos de los últimos 5 años, un adulto joven, senior en IT con un muy buen sueldo piensa en cambiarse:
+- Sueldo bruto por encima del maximo imponible de 3.577.178 (que se calcula por 3.577.178).
+- 15.000.000 de pesos ahorrados en la AFP.
+- Se quiere cambiar del Fondo A:
+    - En Planvital (comisión del 1.16%, rentabilidad del 3.04%).
+    - A UNO (comisión del 0.46%, rentabilidad del 2.48%).
+- Invierte la diferencia en IVV al 10%.
 
 ![Calculadora ejemplo 2](/images/calculadora2.png)
 

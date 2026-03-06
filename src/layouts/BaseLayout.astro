@@ -24,27 +24,42 @@ const withBase = (path: string) => {
     <meta name="description" content={description} />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" id="siteHeader">
       <div class="container nav">
-        <a class="brand" href={withBase('/')}>Ciber + Finanzas</a>
-        <a href={withBase('/')}>Inicio</a>
-        <div class="nav-item">
-          <a href={withBase('/ciberseguridad/')}>Ciberseguridad</a>
-          <div class="submenu">
-            <a href={withBase('/ciberseguridad/certificaciones/')}>Certificaciones</a>
-            <a href={withBase('/ciberseguridad/herramientas/')}>Herramientas</a>
+        <a class="brand" href={withBase('/')}>JS | Ciber+Finanzas</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menu">
+          Menu
+        </button>
+        <div class="nav-links" id="siteNav">
+          <a href={withBase('/')}>Inicio</a>
+          <div class="nav-item">
+            <div class="nav-parent">
+              <a href={withBase('/ciberseguridad/')}>Ciberseguridad</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-ciber" aria-label="Mostrar subcategorias de ciberseguridad">
+                ▾
+              </button>
+            </div>
+            <div class="submenu" id="submenu-ciber">
+              <a href={withBase('/ciberseguridad/certificaciones/')}>Certificaciones</a>
+              <a href={withBase('/ciberseguridad/herramientas/')}>Herramientas</a>
+            </div>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href={withBase('/finanzas/')}>Finanzas</a>
-          <div class="submenu">
-            <a href={withBase('/finanzas/calculadoras/')}>Calculadoras</a>
-            <a href={withBase('/finanzas/articulos/')}>Artículos de Finanzas</a>
+          <div class="nav-item">
+            <div class="nav-parent">
+              <a href={withBase('/finanzas/')}>Finanzas</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-finanzas" aria-label="Mostrar subcategorias de finanzas">
+                ▾
+              </button>
+            </div>
+            <div class="submenu" id="submenu-finanzas">
+              <a href={withBase('/finanzas/calculadoras/')}>Calculadoras</a>
+              <a href={withBase('/finanzas/articulos/')}>Artículos de Finanzas</a>
+            </div>
           </div>
+          <a href={withBase('/cv/')}>CV / Sobre mí</a>
+          <a href={withBase('/otros/')}>Otros</a>
+          <a href={withBase('/blog/')}>Blog</a>
         </div>
-        <a href={withBase('/cv/')}>CV / Sobre mí</a>
-        <a href={withBase('/otros/')}>Otros</a>
-        <a href={withBase('/blog/')}>Blog</a>
       </div>
     </header>
 
@@ -57,5 +72,35 @@ const withBase = (path: string) => {
     <footer>
       <div class="container">© {new Date().getFullYear()} - Sitio personal en Astro</div>
     </footer>
+    <script>
+      const navToggle = document.getElementById('navToggle');
+      const siteHeader = document.getElementById('siteHeader');
+      navToggle?.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        siteHeader?.classList.toggle('nav-open', !expanded);
+        if (expanded) {
+          document.querySelectorAll('.nav-item.submenu-open').forEach((item) => item.classList.remove('submenu-open'));
+          document.querySelectorAll('.submenu-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
+        }
+      });
+
+      document.querySelectorAll('.submenu-toggle').forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+          event.preventDefault();
+          const item = btn.closest('.nav-item');
+          if (!item) return;
+          const willOpen = !item.classList.contains('submenu-open');
+          document.querySelectorAll('.nav-item.submenu-open').forEach((openItem) => {
+            openItem.classList.remove('submenu-open');
+          });
+          document.querySelectorAll('.submenu-toggle').forEach((toggleBtn) => {
+            toggleBtn.setAttribute('aria-expanded', 'false');
+          });
+          item.classList.toggle('submenu-open', willOpen);
+          btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+      });
+    </script>
   </body>
 </html>
