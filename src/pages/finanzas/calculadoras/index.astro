@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+---
+
+<BaseLayout title="Calculadoras">
+  <h1>Calculadoras</h1>
+  <div class="grid">
+    <article class="card">
+      <h3>Calculadora de Cambio AFP</h3>
+      <p>Compara patrimonio entre AFP actual y destino considerando comisiones y alternativa de inversión.</p>
+      <a href={`${basePath}herramientas/calculadora-afp/index.html`}>Abrir calculadora</a>
+    </article>
+  </div>
+</BaseLayout>

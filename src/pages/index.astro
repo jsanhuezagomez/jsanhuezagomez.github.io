@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+---
+
+<BaseLayout title="Inicio | Finanzas y Ciberseguridad" description="Blog y herramientas sobre finanzas personales, ciberseguridad y tecnología.">
+  <section class="hero">
+    <h1>Finanzas, Ciberseguridad y Tecnología</h1>
+    <p>
+      Este sitio reúne artículos prácticos, opiniones y herramientas. El objetivo es explicar temas complejos
+      con ejemplos concretos y lenguaje claro.
+    </p>
+    <div>
+      <span class="badge">Finanzas</span>
+      <span class="badge">Calculadoras</span>
+      <span class="badge">Ciberseguridad</span>
+      <span class="badge">Certificaciones</span>
+      <span class="badge">Otros</span>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h3>Finanzas</h3>
+      <p>Educación financiera aplicada, análisis y decisiones con números.</p>
+      <a href={`${basePath}finanzas/`}>Ir a Finanzas</a>
+    </article>
+    <article class="card">
+      <h3>Calculadoras</h3>
+      <p>Herramientas para comparar escenarios y aterrizar decisiones.</p>
+      <a href={`${basePath}finanzas/calculadoras/`}>Ver calculadoras</a>
+    </article>
+    <article class="card">
+      <h3>Ciberseguridad</h3>
+      <p>Buenas prácticas, certificaciones y herramientas útiles.</p>
+      <a href={`${basePath}ciberseguridad/`}>Ir a Ciberseguridad</a>
+    </article>
+    <article class="card">
+      <h3>CV / Sobre mí</h3>
+      <p>Resumen profesional y líneas de trabajo.</p>
+      <a href={`${basePath}cv/`}>Ver perfil</a>
+    </article>
+  </section>
+</BaseLayout>

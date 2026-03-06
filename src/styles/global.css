@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0f14;
+  --surface: #121821;
+  --surface-2: #1a2330;
+  --text: #e6edf3;
+  --muted: #9fb0c2;
+  --accent: #35b6a6;
+  --accent-2: #2d8f84;
+  --border: #243447;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top right, #13202f 0%, var(--bg) 45%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #67d6c8;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 15, 20, 0.75);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-right: auto;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+.hero {
+  background: linear-gradient(140deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 1.25rem 0 2rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.post-content img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 780px);
+  height: auto;
+  margin: 1rem auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.post-content img.zoomable {
+  cursor: zoom-in;
+}
+
+.image-lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 95vw;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.image-lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}

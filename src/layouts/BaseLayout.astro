@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Sitio personal de finanzas y ciberseguridad.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const withBase = (path: string) => {
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const clean = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}${clean}`;
+};
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href={withBase('/')}>JS | Finanzas + Ciber</a>
+        <a href={withBase('/')}>Inicio</a>
+        <a href={withBase('/finanzas/')}>Finanzas</a>
+        <a href={withBase('/ciberseguridad/')}>Ciberseguridad</a>
+        <a href={withBase('/cv/')}>CV / Sobre mí</a>
+        <a href={withBase('/otros/')}>Otros</a>
+        <a href={withBase('/blog/')}>Blog</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">© {new Date().getFullYear()} - Sitio personal en Astro</div>
+    </footer>
+  </body>
+</html>

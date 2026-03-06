@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | Blog`} description={post.data.description}>
+  <article class="card">
+    <h1>{post.data.title}</h1>
+    <p>
+      <span class="badge">{post.data.category}</span>
+      <span class="badge">{post.data.pubDate.toLocaleDateString('es-CL')}</span>
+    </p>
+    <div class="post-content">
+      <Content />
+    </div>
+  </article>
+  <dialog id="imageLightbox" class="image-lightbox">
+    <img id="lightboxImage" alt="" />
+  </dialog>
+</BaseLayout>
+
+<script>
+  const dialog = document.getElementById('imageLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const images = document.querySelectorAll('.post-content img');
+
+  images.forEach((img) => {
+    img.classList.add('zoomable');
+    img.addEventListener('click', () => {
+      if (!(dialog instanceof HTMLDialogElement) || !(lightboxImage instanceof HTMLImageElement)) return;
+      lightboxImage.src = img.getAttribute('src') || '';
+      lightboxImage.alt = img.getAttribute('alt') || '';
+      dialog.showModal();
+    });
+  });
+
+  if (dialog instanceof HTMLDialogElement) {
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+</script>

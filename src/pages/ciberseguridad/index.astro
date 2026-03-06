@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+---
+
+<BaseLayout title="Ciberseguridad">
+  <h1>Ciberseguridad</h1>
+  <p>Artículos técnicos, aprendizajes de campo y criterio para evaluar riesgos reales.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Certificaciones</h3>
+      <p>Experiencias, preparación y análisis costo/beneficio.</p>
+      <a href={`${basePath}ciberseguridad/certificaciones/`}>Ir a Certificaciones</a>
+    </article>
+    <article class="card">
+      <h3>Herramientas de Ciberseguridad</h3>
+      <p>Herramientas prácticas, flujos de trabajo y evaluación de utilidad.</p>
+      <a href={`${basePath}ciberseguridad/herramientas/`}>Ver herramientas</a>
+    </article>
+  </div>
+</BaseLayout>
