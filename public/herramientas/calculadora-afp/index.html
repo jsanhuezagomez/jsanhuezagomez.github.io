@@ -21,6 +21,7 @@
             <label for="sueldoBruto">Sueldo bruto mensual (CLP)</label>
             <input id="sueldoBruto" type="text" inputmode="decimal" value="1500000" required />
             <small class="error" id="errSueldoBruto"></small>
+            <small class="field-warning" id="warnSueldoBruto"></small>
           </div>
 
           <div class="field">
@@ -58,6 +59,12 @@
             <input id="rentAltAnual" type="text" inputmode="decimal" value="8.8" required />
             <small class="error" id="errRentAltAnual"></small>
           </div>
+
+          <div class="field">
+            <label for="maxImponible">Máximo imponible mensual (por defecto 3.577.178 CLP)</label>
+            <input id="maxImponible" type="text" inputmode="decimal" value="3577178" required />
+            <small class="error" id="errMaxImponible"></small>
+          </div>
         </div>
 
         <div class="actions">
@@ -67,7 +74,7 @@
       </form>
 
       <div class="warning">
-        Se usa tope imponible mensual de CLP 3.577.178 y cotización obligatoria de 10%.
+        Máximo imponible mensual es (a la fecha) CLP 3.577.178 y la cotización obligatoria es de 10%.
       </div>
       <div class="form-error" id="formError"></div>
     </div>
@@ -91,19 +98,19 @@
           <div class="value" id="outComision5Destino">-</div>
         </div>
         <div class="result">
-          <h3>Diferencia de costos en 5 años</h3>
+          <h3>Diferencia de costos acumulados en 5 años</h3>
           <div class="value" id="outDifCostos5">-</div>
         </div>
         <div class="result">
-          <h3>Monto final cuenta alternativa (5 años)</h3>
+          <h3>Monto final en cuenta alternativa (5 años)</h3>
           <div class="value" id="outAltFinal">-</div>
         </div>
         <div class="result">
-          <h3>Patrimonio con AFP actual (restando su costo)</h3>
+          <h3>Patrimonio con AFP actual (restando costo)</h3>
           <div class="value" id="outActualAjustada">-</div>
         </div>
         <div class="result">
-          <h3>Patrimonio con AFP destino (restando su costo)</h3>
+          <h3>Patrimonio con AFP destino (restando costo)</h3>
           <div class="value" id="outDestinoAjustada">-</div>
         </div>
       </div>

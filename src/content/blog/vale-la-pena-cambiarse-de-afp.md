@@ -2,7 +2,7 @@
 title: "¿Vale la pena cambiarse de AFP?"
 description: "Cómo se calcula patrimonio final, comisiones y diferencia invertida."
 pubDate: 2026-03-06
-category: "calculadoras"
+category: "finanzas"
 tags: ["afp", "comisiones", "finanzas"]
 draft: false
 ---
@@ -15,8 +15,8 @@ Aunque antes que nada veamos si vale la pena poner plata en las AFPs en primer l
 
 Si bien las AFPs como ahorro obligatorio permiten tener ahorros garantizados al momento de jubilarse y la rentabilidad es buena comparada con algunas de las herramientas financieras disponibles en el mercado chileno, la verdad, es que si lo comparamos con el S&P500, la rentabilidad es, honestamente, mediocre.
 
-Como comparación este es el Fondo A (el más riesgoso y el que más paga) con un promedio anual de rentabilidad entre el 2002 y el 2026 del 5.83% en el mejor de los casos ([link](https://www.spensiones.cl/portal/institucional/597/w3-article-15807.html))
-![Rentabilidad de AFPs 2002-2026](/images/rentabilidad_fondo_a.png).
+Como comparación este es el Fondo A (el más riesgoso y el que más paga) con un promedio anual de rentabilidad entre el 2002 y el 2026 del 5.83% en el mejor de los casos ([link](https://www.spensiones.cl/portal/institucional/597/w3-article-15807.html)).
+![Rentabilidad de AFPs 2002-2026](/images/rentabilidad_fondo_a.png)
 
 Al momento de escribir este artículo, PlanVital era la AFP con mayor rentabilidad real en los últimos 5 años, con una rentabilidad promedio anual de 3.03%
 ![Rentabilidad de AFPs últimos 5 años](/images/rentabilidad_fondo_a_planvital.png)

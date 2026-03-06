@@ -98,6 +98,14 @@ p {
   min-height: 18px;
 }
 
+.field-warning {
+  display: block;
+  min-height: 16px;
+  margin-top: 2px;
+  color: var(--warn);
+  font-size: 0.8rem;
+}
+
 .actions {
   display: flex;
   gap: 10px;

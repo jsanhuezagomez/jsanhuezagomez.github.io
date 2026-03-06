@@ -1,4 +1,4 @@
-const MAX_IMPONIBLE = 3577178;
+const DEFAULT_MAX_IMPONIBLE = 3577178;
 const MESES = 60;
 
 function byId(id) {
@@ -58,11 +58,13 @@ const fieldRules = [
   { id: "comisionAfpDestinoPct", label: "Comisión AFP destino", min: 0 },
   { id: "rentAfpActualAnual", label: "Rentabilidad AFP actual", min: -99.99 },
   { id: "rentAfpDestinoAnual", label: "Rentabilidad AFP destino", min: -99.99 },
-  { id: "rentAltAnual", label: "Rentabilidad alternativa", min: -99.99 }
+  { id: "rentAltAnual", label: "Rentabilidad alternativa", min: -99.99 },
+  { id: "maxImponible", label: "Máximo imponible mensual", min: 0 }
 ];
 
 function clearErrors() {
   byId("formError").textContent = "";
+  byId("warnSueldoBruto").textContent = "";
   fieldRules.forEach(({ id }) => {
     const input = byId(id);
     const err = byId(`err${id.charAt(0).toUpperCase()}${id.slice(1)}`);
@@ -118,9 +120,14 @@ function calcular() {
   const rentAltAnual = getNum("rentAltAnual");
   const rentAfpActualAnual = getNum("rentAfpActualAnual");
   const rentAfpDestinoAnual = getNum("rentAfpDestinoAnual");
+  const maxImponible = getNum("maxImponible");
 
-  const baseImponible = Math.min(sueldoBruto, MAX_IMPONIBLE);
+  const baseImponible = Math.min(sueldoBruto, maxImponible);
   const cotizacionMensual = baseImponible * 0.10;
+
+  if (sueldoBruto > maxImponible) {
+    byId("warnSueldoBruto").textContent = "Sueldo bruto: Se asumirá sueldo igual a máximo imponible.";
+  }
 
   const rAfpActualMensual = annualPctToMonthlyRate(rentAfpActualAnual);
   const rAfpDestinoMensual = annualPctToMonthlyRate(rentAfpDestinoAnual);
@@ -187,7 +194,7 @@ function calcular() {
   const mejorMonto = Math.max(actualPatrimonio, destinoPatrimonio);
 
   byId("outGanador").innerHTML =
-    `Resultado final: <strong>${ganador}</strong> con ${formatClp(mejorMonto)} neto (descontando comisiones y sumando cuenta alternativa a la AFP con menor comisión).`;
+    `Resultado final: <strong>${ganador}</strong> con ${formatClp(mejorMonto)} neto (descontando comisiones y sumando monto acumulado en cuenta alternativa a la AFP con menor comisión).`;
 }
 
 function limpiarResultados() {
@@ -205,6 +212,11 @@ function limpiarResultados() {
     byId(id).textContent = "-";
   });
   byId("outGanador").textContent = "Resultado final: -";
+  byId("warnSueldoBruto").textContent = "";
+}
+
+if (byId("maxImponible")) {
+  byId("maxImponible").value = String(DEFAULT_MAX_IMPONIBLE);
 }
 
 byId("calcForm").addEventListener("submit", (e) => {
