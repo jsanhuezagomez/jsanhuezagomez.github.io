@@ -1,6 +1,6 @@
 ---
 title: "¿Vale la pena cambiarse de AFP?"
-description: "Cómo se calcula patrimonio final, comisiones y diferencia invertida."
+description: "Como calcular el cambio considerando comisiones, rendimientos e inversiones alternativas."
 pubDate: 2026-03-06
 category: "finanzas"
 tags: ["afp", "comisiones", "finanzas"]
@@ -21,7 +21,7 @@ Como comparación este es el Fondo A (el más riesgoso y el que más paga) con u
 Al momento de escribir este artículo, PlanVital era la AFP con mayor rentabilidad real en los últimos 5 años, con una rentabilidad promedio anual de 3.03%
 ![Rentabilidad de AFPs últimos 5 años](/images/rentabilidad_fondo_a_planvital.png)
 
-Los últimos 5 años se pueden ver en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec).
+Los últimos 5 años se pueden ver actualizados en [Superintendencia de Pensiones](https://www.spensiones.cl/infoydec).
 
 ![Rentabilidad de todos los fondos A últimos 5 años](/images/rentabilidad_fondo_a_todos_5.png)
 
