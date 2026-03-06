@@ -42,6 +42,7 @@ header.site-header {
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .nav {
@@ -56,6 +57,52 @@ header.site-header {
   font-weight: 700;
   letter-spacing: 0.3px;
   margin-right: auto;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0.5rem;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 0.35rem;
+  z-index: 40;
+}
+
+.submenu a {
+  display: block;
+  color: var(--text);
+  padding: 0.4rem 0.55rem;
+  border-radius: 7px;
+}
+
+.submenu a:hover {
+  background: var(--surface-2);
+  color: var(--accent);
+}
+
+.nav-item:hover .submenu,
+.nav-item:focus-within .submenu,
+.nav-item:active .submenu {
+  display: block;
 }
 
 main {
@@ -134,4 +181,18 @@ footer {
   max-height: 90vh;
   border-radius: 10px;
   border: 1px solid var(--border);
+}
+
+@media (max-width: 760px) {
+  .nav-item {
+    display: block;
+    width: 100%;
+  }
+
+  .submenu {
+    display: block;
+    position: static;
+    min-width: auto;
+    margin-top: 0.25rem;
+  }
 }

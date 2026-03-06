@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .filter((post) => post.data.category === 'finanzas' || post.data.category === 'calculadoras')
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout title="Artículos de Finanzas">
+  <h1>Artículos de Finanzas</h1>
+  <p>Análisis y contenido financiero, incluyendo publicaciones ligadas a calculadoras.</p>
+  <div class="grid">
+    {posts.map((post) => (
+      <article class="card">
+        <h3><a href={`${basePath}blog/${post.slug}/`}>{post.data.title}</a></h3>
+        <p>{post.data.description}</p>
+        <div>
+          <span class="badge">{post.data.category}</span>
+          <span class="badge">{post.data.pubDate.toLocaleDateString('es-CL')}</span>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

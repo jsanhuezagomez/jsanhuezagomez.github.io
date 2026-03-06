@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Sitio personal de finanzas y ciberseguridad.' } = Astro.props;
+const { title, description = 'Sitio personal de ciberseguridad y finanzas.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const withBase = (path: string) => {
@@ -26,10 +26,22 @@ const withBase = (path: string) => {
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href={withBase('/')}>JS | Finanzas + Ciber</a>
+        <a class="brand" href={withBase('/')}>Ciber + Finanzas</a>
         <a href={withBase('/')}>Inicio</a>
-        <a href={withBase('/finanzas/')}>Finanzas</a>
-        <a href={withBase('/ciberseguridad/')}>Ciberseguridad</a>
+        <div class="nav-item">
+          <a href={withBase('/ciberseguridad/')}>Ciberseguridad</a>
+          <div class="submenu">
+            <a href={withBase('/ciberseguridad/certificaciones/')}>Certificaciones</a>
+            <a href={withBase('/ciberseguridad/herramientas/')}>Herramientas</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href={withBase('/finanzas/')}>Finanzas</a>
+          <div class="submenu">
+            <a href={withBase('/finanzas/calculadoras/')}>Calculadoras</a>
+            <a href={withBase('/finanzas/articulos/')}>Artículos de Finanzas</a>
+          </div>
+        </div>
         <a href={withBase('/cv/')}>CV / Sobre mí</a>
         <a href={withBase('/otros/')}>Otros</a>
         <a href={withBase('/blog/')}>Blog</a>
