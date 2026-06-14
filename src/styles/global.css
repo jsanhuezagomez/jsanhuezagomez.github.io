@@ -1,13 +1,13 @@
 :root {
   color-scheme: dark;
-  --bg: #0b0f14;
-  --surface: #121821;
-  --surface-2: #1a2330;
-  --text: #e6edf3;
-  --muted: #9fb0c2;
-  --accent: #35b6a6;
-  --accent-2: #2d8f84;
-  --border: #243447;
+  --bg: #030538;
+  --surface: #080d4f;
+  --surface-2: #0d1d68;
+  --text: #edf7ff;
+  --muted: #a9bfda;
+  --accent: #11cfff;
+  --accent-2: #087dff;
+  --border: #173277;
 }
 
 * {
@@ -17,7 +17,10 @@
 body {
   margin: 0;
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top right, #13202f 0%, var(--bg) 45%);
+  background:
+    radial-gradient(circle at top right, rgba(17, 207, 255, 0.2) 0%, rgba(8, 125, 255, 0.11) 24%, transparent 44%),
+    radial-gradient(circle at 48% 0%, rgba(17, 207, 255, 0.11) 0%, transparent 34%),
+    var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -28,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #67d6c8;
+  color: #78e8ff;
 }
 
 .container {
@@ -38,7 +41,7 @@ a:hover {
 
 header.site-header {
   border-bottom: 1px solid var(--border);
-  background: rgba(11, 15, 20, 0.75);
+  background: rgba(3, 5, 56, 0.78);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -144,7 +147,9 @@ main {
 }
 
 .hero {
-  background: linear-gradient(140deg, var(--surface), var(--surface-2));
+  background:
+    radial-gradient(circle at 78% 20%, rgba(17, 207, 255, 0.18), transparent 32%),
+    linear-gradient(140deg, var(--surface), var(--surface-2));
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2rem;
@@ -162,6 +167,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;
+  box-shadow: 0 0 0 1px rgba(17, 207, 255, 0.02), 0 18px 42px rgba(0, 4, 32, 0.18);
 }
 
 h1, h2, h3 {

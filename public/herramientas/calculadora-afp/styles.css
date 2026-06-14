@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --bg: #0b0f14;
-  --surface: #121821;
-  --surface-2: #1a2330;
-  --text: #e6edf3;
-  --muted: #9fb0c2;
-  --line: #243447;
-  --accent: #35b6a6;
-  --accent-2: #2d8f84;
+  --bg: #030538;
+  --surface: #080d4f;
+  --surface-2: #0d1d68;
+  --text: #edf7ff;
+  --muted: #a9bfda;
+  --line: #173277;
+  --accent: #11cfff;
+  --accent-2: #087dff;
   --danger: #f87171;
   --warn: #f59e0b;
-  --ok: #34d399;
+  --ok: #52e5ff;
 }
 
 * {
@@ -20,7 +20,10 @@
 body {
   margin: 0;
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top right, #13202f 0%, var(--bg) 45%);
+  background:
+    radial-gradient(circle at top right, rgba(17, 207, 255, 0.2) 0%, rgba(8, 125, 255, 0.11) 24%, transparent 44%),
+    radial-gradient(circle at 48% 0%, rgba(17, 207, 255, 0.11) 0%, transparent 34%),
+    var(--bg);
   color: var(--text);
 }
 
@@ -31,7 +34,9 @@ body {
 }
 
 .card {
-  background: linear-gradient(140deg, var(--surface), var(--surface-2));
+  background:
+    radial-gradient(circle at 78% 20%, rgba(17, 207, 255, 0.16), transparent 32%),
+    linear-gradient(140deg, var(--surface), var(--surface-2));
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 18px;
@@ -75,7 +80,7 @@ p {
   border-radius: 10px;
   font-size: 0.95rem;
   color: var(--text);
-  background: #0f1722;
+  background: #050944;
 }
 
 .field input.invalid {
@@ -122,16 +127,16 @@ button {
 
 .btn-primary {
   background: var(--accent);
-  color: #06231f;
+  color: #02072e;
   font-weight: 700;
 }
 
 .btn-primary:hover {
-  background: #58d3c3;
+  background: #78e8ff;
 }
 
 .btn-secondary {
-  background: #263447;
+  background: #12266f;
   color: var(--text);
 }
 
@@ -145,19 +150,19 @@ button {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 12px;
-  background: #101720;
+  background: #060b46;
 }
 
 .result h3 {
   margin: 0 0 8px;
   font-size: 0.98rem;
-  color: #c1d0de;
+  color: #b9d4ef;
 }
 
 .result .value {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #e8f0f8;
+  color: #edf7ff;
 }
 
 .winner {
@@ -165,7 +170,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 12px;
-  background: #0d1b20;
+  background: #051252;
 }
 
 .winner strong {
